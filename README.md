@@ -129,6 +129,16 @@ postgres=# SELECT pg_relation_filepath('transactions');
 
 For me, the `accounts` table has OID 16386,
 and so it is stored in the file `$PGDATA/base/13481/16386`.
+
+> **Note:**
+> Your OID will probably be the same as mine, because the given `schema.sql`/`Dockerfile` combination is determinisitic.
+> Determinism is always a Very Nice Thing, and is something that makes me as a programmer sleep well at night even if we don't strictly need it.
+> In this case, the determinism isn't super important, but it should make following along with the instructions a bit easier because your OIDs will likely match mine right now.
+> At some point throughout this lab, however, you are likely to run a command slightly differently than I did.
+> This may cause future OIDs to have different values.
+> That's okay.
+> Just substitute the appropriate OID for your database and continue.
+
 Use the `ls -l` command to get the total size of the table.
 ```
 ls -l base/13481/16386
@@ -253,7 +263,7 @@ That's because:
 1. We call two UPDATEs on `balances` for every insert into `transactions`.
 1. For every UPDATE, we create 1 dead tuple according to the procedure outlined at <http://www.interdb.jp/pg/pgsql05/03.html#533-update>.
 1. Therefore we should have 2e6 dead tuples, but we have a number much smaller.
-    (I got 14149, but your number is likely to be different.)
+    (I got 14149, but your number is likely to be different due to nondeterminism of the parallel code in `lots_of_data.sh` script.)
 
 Why is that?
 
