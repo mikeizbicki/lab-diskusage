@@ -35,7 +35,7 @@ You are not responsible for memorizing their purpose, but you are responsible fo
 
 For us, the most important file is the `base` directory.
 It contains all databases in the postgres cluster, each represented by a directory.
-You should see three folders, although the might be named differently than mine below.
+You should see three folders, although they might be named differently than mine below.
 ```
 $ ls base
 1  13480  13481
