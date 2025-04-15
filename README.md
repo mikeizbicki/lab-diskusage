@@ -282,7 +282,8 @@ For our purposes right now, there are two important things to know about the HOT
 
 > **Note:**
 > HOT tuples are described in detail in [Chapter 7 of our textbook](http://www.interdb.jp/pg/pgsql07.html).
-> For the final exam, you are responsible for understanding how HOT tuples work in detail, but we will not be going over them in lecture.
+> ~~For the final exam, you are responsible for understanding how HOT tuples work in detail, but we will not be going over them in lecture.~~
+> No final exam this semester :)
 
 <!--
 ```
@@ -388,6 +389,7 @@ $ ls -l base/13481/16435*
 -rw------- 1 postgres postgres 450560 Apr  4 22:56 base/13481/16435
 ```
 
+FIXME:
 Talk about durability here.
 -->
 
@@ -674,5 +676,5 @@ root@294274f36cc2:/var/lib/postgresql/data# ls -l base/13481/16425*
 
 This material is not normally taught in college CS classes because it is difficult to design problem sets that will assess a student's understanding.
 Nevertheless, it is important material that is required for understanding real-world large scale systems.
-Therefore, we're covering the material in class, and you're responsible for this material in the final exam, but there's no "real" submission.
+Therefore, we're covering the material in class, ~~and you're responsible for this material in the final exam,~~ but there's no "real" submission.
 To submit the lab, just write 1 short paragraph into sakai about what you learned.
