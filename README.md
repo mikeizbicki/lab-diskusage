@@ -591,7 +591,7 @@ postgres=# EXPLAIN(analyze, buffers) SELECT max(balance) FROM balances;
  Execution Time: 0.092 ms
 (11 rows)
 ```
-The most import line in the above output is line 2, which reads
+The most important line in the above output is line 2, which reads
 ```
    Buffers: shared hit=3
 ```
