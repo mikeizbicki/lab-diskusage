@@ -141,7 +141,7 @@ and so it is stored in the file `$PGDATA/base/13481/16386`.
 
 Use the `ls -l` command to get the total size of the table.
 ```
-ls -l base/13481/16386
+$ ls -l base/13481/16386
 -rw------- 1 postgres postgres 0 Apr  5 06:05 base/13481/16386
 ```
 At this point, you should get that it takes up 0 bytes because we haven't inserted anything yet.
