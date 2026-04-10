@@ -476,7 +476,7 @@ In total, creating this index caused a table that was previously taking only abo
 Disk space is cheap, and so for most problems a 100x explosion in filesize is not a problem.
 But for very large datasets, this could be disasterous.
 
-Let's now observer why the filesize is so bloated.
+Let's now observe why the filesize is so bloated.
 Rerun our command to measure the number of dead tuples:
 ```
 postgres=# SELECT n_live_tup, n_dead_tup, relname FROM pg_stat_user_tables;
@@ -568,7 +568,7 @@ As more information gets added to the table, this number would grow linearly.
 
 With an index, however, we will use significantly fewer page accesses.
 
-In class, we saw how to use the EXPLAIN command to compute the *query plan*.
+We will observe this behavior using the EXPLAIN command to compute the *query plan*.
 This is the imperative algorithm that postgres will use to actually compute the query's results. 
 There are many variations of the EXPLAIN command,
 but one useful variation is `EXPLAIN(analyze,buffers)`.
@@ -609,6 +609,7 @@ So far we've seen:
 1. But indexes disable the HOT tuple optimization.
 1. This can cause our table to have too many dead tuples.
 1. Dead tuples lead to wasted disk space (and lots of other problems).
+
 The autovacuum will help us minimize these drawbacks of indexes.
 
 Examine the contents of the schema.
